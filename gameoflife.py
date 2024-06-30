@@ -24,12 +24,12 @@ def update(screen, box, size, with_progress=False):
             elif 2 <= alive <= 3:
                 updated_cells[row, col] = 1
                 if with_progress:
-                    color = tuple(random.randint(0, 255) for _ in range(3))  # alive cells with progress
+                    color = tuple(random.randint(0, 255) for _ in range(3))  
         else:
             if alive == 3:
                 updated_cells[row, col] = 1
                 if with_progress:
-                    color = tuple(random.randint(0, 255) for _ in range(3))  # newly alive cells with progress
+                    color = tuple(random.randint(0, 255) for _ in range(3))  
 
         pygame.draw.rect(screen, color, (col * size, row * size, size - 1, size - 1))
 
